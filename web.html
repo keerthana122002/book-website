@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Book Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .top-frame {
+            height: 140px;
+            background-color: #4db37c;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            height: calc(100vh - 100px);
+        }
+        .left-frame {
+            width: 20%;
+            background-color: #e4d5d5;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .right-frame {
+            width: 90%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-frame">
+        <img src="img.png" alt="Logo" height="100" style="float: left; margin-right: 70px;">
+        <h1 style="text-align: center;">Online Book Store</h1>
+        <nav style="float: right">
+            <a href="#home" onclick="loadPage('home')">Home</a>
+            <a href="#login" onclick="loadPage('login')">Login</a>
+            <a href="#registration" onclick="loadPage('registration')">Registration</a>
+            <a href="#catalogue" onclick="loadPage('catalogue')">Catalogue</a>
+            <a href="#cart" onclick="loadPage('cart')">Cart</a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="left-frame">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="#cse" onclick="loadPage('catalogue&category=CSE')">CSE</a></li>
+                <li><a href="#ece" onclick="loadPage('catalogue&category=ECE')">ECE</a></li>
+                <li><a href="#eee" onclick="loadPage('catalogue&category=EEE')">EEE</a></li>
+                <li><a href="#civil" onclick="loadPage('catalogue&category=CIVIL')">CIVIL</a></li>
+            </ul>
+        </div>
+        <div class="right-frame">
+            <iframe id="right-frame" src="about:blank"></iframe>
+        </div>
+    </div>
+
+    <script>
+        const pages = {
+            home: `
+                <h2>Welcome to Our Online Book Store!</h2>
+                <p>Browse our wide range of books and add your favorites to the cart.</p>
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pondy Bookstore - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .highlight {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to the pondy Bookstore</h2>
+    <marquee>FOR THE RETAIL PRICE AND AFORDABLE BOOKS ARE AVAILABLE HERE!!!</MARQUEE>
+
+    <section>
+        <h3>About Us</h3>
+        <p>Welcome to the College Bookstore, your one-stop shop for all your academic needs! Our online platform is designed to provide students, faculty, and staff with a convenient way to purchase textbooks, reference materials, and other educational resources.</p>
+    </section>
+
+    <section>
+        <h3>What We Offer</h3>
+        <ul>
+            <li><span class="highlight">Extensive Catalogue</span>: We offer a wide range of books across various disciplines, including Computer Science, Electronics, Mechanical Engineering, Civil Engineering, and more.</li>
+            <li><span class="highlight">Easy Navigation</span>: Our website is structured to make it easy for you to find what you need. Use the navigation links on the left to explore books by department.</li>
+            <li><span class="highlight">User-Friendly Experience</span>: From browsing to checkout, our user-friendly interface ensures a smooth shopping experience.</li>
+            <li><span class="highlight">Secure Transactions</span>: We prioritize your security with secure payment gateways for safe transactions.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>How to Use the Store</h3>
+        <ul>
+            <li><span class="highlight">Home Page</span>: Get to know about the bookstore, our offerings, and any special announcements.</li>
+            <li><span class="highlight">Login</span>: Access your account to view order history, saved items, and personalized recommendations.</li>
+            <li><span class="highlight">Registration</span>: New users can create an account to start shopping and access special member benefits.</li>
+            <li><span class="highlight">Catalogue</span>: Browse our extensive catalogue by department or search for specific titles.</li>
+            <li><span class="highlight">Cart</span>: Review the items you wish to purchase and proceed to checkout when ready.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Why Choose Us?</h3>
+        <ul>
+            <li><span class="highlight">Convenience</span>: Shop from anywhere at any time with our online platform.</li>
+            <li><span class="highlight">Comprehensive Selection</span>: Find all your required textbooks and supplementary materials in one place.</li>
+            <li><span class="highlight">Competitive Pricing</span>: We offer competitive prices to ensure you get the best value for your money.</li>
+            <li><span class="highlight">Fast Delivery</span>: Enjoy fast and reliable delivery services.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Contact Us</h3>
+        <p>For any queries or support, feel free to reach out to our customer service team. We are here to help you make the most of your academic journey.</p>
+    </section>
+</body>
+</html>
+
+            `,
+            login: `
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login to Your Account</title>
+    
+
+</head>
+<body>
+    <link rel="stylesheet" href="styles.css">
+    <div class="login-container">
+        <table width="75%">
+            <tr>
+                <td>
+                    <img src="img.png" alt="College Logo" style="height:150px;">
+                </td>
+                <td style="text-align: center;">
+                    <h1>PONDY BOOK STORE</h1>
+                </td>
+            </tr>
+        </table>    
+        <h2>Login</h2>
+<!--<form action="right.html" method="post">-->
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+       
+    </div>
+</body>
+</html>
+
+            `,
+            registration: `
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register for an Account</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+    <div class="registration-container">
+        <table width="75%">
+            <tr>
+                <td>
+                    <img src="img.png" alt="College Logo" style="height:150px;">
+                </td>
+                <td style="text-align: center;">
+                    <h2>PONDY BOOK STORE</h2>
+                </td>
+            </tr>
+        </table>    
+        
+        <h2>Create an Account</h2>
+        <form action="registration.html" method="post">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+        </form>
+        
+    </div>
+</body>
+</html>
+
+            `,
+            catalogue: `
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Catalogue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5cb85c;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <table width="90%">
+        <tr>
+            <td>
+                <img src="img.png" alt="College Logo" style="height:150px;">
+            </td>
+            <td style="text-align: center;">
+                <h1><center>PONDY BOOK STORE</center></h1>
+            </td>
+        </tr>
+    </table>
+
+
+    <h1>Book Catalogue</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cover</th>
+                <th>Book name</th>
+                <th>Author</th>
+                <th>Publisher</th>
+                <th>Price</th>
+                <th>Add to Cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="book1.jpg" alt="Book 1"></td>
+                <td>XML bible</td>
+                <td>winston</td>
+                <td>wirely</td>
+                <td>500.00</td>
+                <td><button>Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="book2.jpg" alt="Book 2"></td>
+                <td>AI author</td>
+                <td>S. russel</td>
+                <td>Princeton hall</td>
+                <td>790.99</td>
+                <td><button>Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="book3.jpg" alt="Book 3"></td>
+                <td>Java 2</td>
+                <td>watson</td>
+                <td>BPB Publications</td>
+                <td>1114.99</td>
+                <td><button>Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="book4.jpg" alt="Book 4"></td>
+                <td>html in 24 hrs</td>
+                <td>sam peter</td>
+                <td>sam publications</td>
+                <td>2980.99</td>
+                <td><button>Add to Cart</button></td>
+            </tr>
+            
+    </table>
+
+</body>
+</html>
+
+            `,
+            
+            'catalogue&category=CSE': `
+                <h2>CSE Book Catalogue</h2>
+                <table>
+                    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5cb85c;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+                    <tr>
+                        <th>Cover</th>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Price</th>
+                        <th>cart</th>
+                    </tr>
+                    <tr>
+                 <td><img src="book1.jpg" alt="Book 1"></td>
+                <td>XML bible</td>
+                <td>winston</td>
+                <td>wirely</td>
+                <td>500.00</td>
+                <td><button>Add to Cart</button></td></tr>
+                
+            `,
+            'catalogue&category=ECE': `
+                <h2>ECE Book Catalogue</h2>
+                <table>
+                    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5cb85c;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+                    <tr>
+                        <th>Cover</th>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Price</th>
+                        <th>cart</th>
+                    </tr>
+                    <tr>
+                        <td><img src="book2.jpg" alt="Book 2"></td>
+                <td>AI author</td>
+                <td>S. russel</td>
+                <td>Princeton hall</td>
+                <td>790.99</td>
+                <td><button>Add to Cart</button></td>
+                    </tr>
+                    
+                 
+                
+            `,
+            'catalogue&category=EEE': `
+                <h2>EEE Book Catalogue</h2>
+                <table>
+                    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5cb85c;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+                    <tr>
+                        <th>Cover</th>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Price</th>
+                        <th>cart</th>
+                    </tr>
+                    <tr>
+                        <td><img src="book3.jpg" alt="Book 2"></td>
+                        <td>Java 2</td>
+                <td>watson</td>
+                <td>BPB Publications</td>
+                <td>1114.99</td>
+                <td><button>Add to Cart</button></td>
+               
+            `,
+            'catalogue&category=CIVIL': `
+                <h2>CIVIL Book Catalogue</h2>
+                <table>
+                    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5cb85c;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+                    <tr>
+                        <th>Cover</th>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Price</th>
+                        <th>cart</th>
+                    </tr>
+                    <tr>
+                    <td><img src="book4.jpg" alt="Book 4"></td>
+                <td>html in 24 hrs</td>
+                <td>sam peter</td>
+                <td>sam publications</td>
+                <td>2980.99</td>
+                <td><button>Add to Cart</button></td>
+            </tr>
+                    
+                </table>
+            `,
+            cart: `
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart - College Bookstore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .total {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Your Cart</h2>
+    <table>
+        <tr>
+            <th>Book Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>Introduction to Algorithms</td>
+            <td>1</td>
+            <td>$50.00</td>
+            <td>$50.00</td>
+        </tr>
+        <tr>
+            <td>Artificial Intelligence: A Modern Approach</td>
+            <td>1</td>
+            <td>$70.00</td>
+            <td>$70.00</td>
+        </tr>
+        <tr>
+            <td>Operating System Concepts</td>
+            <td>2</td>
+            <td>$60.00</td>
+            <td>$120.00</td>
+        </tr>
+    </table>
+    <p class="total">Total: $240.00</p>
+    <button class="btn" onclick="updateCart()">Update Cart</button>
+    <button class="btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+
+    <script>
+        function updateCart() {
+            alert('Cart updated!');
+        }
+
+        function proceedToCheckout() {
+            alert('Proceeding to checkout!');
+            // Here you would typically redirect to the checkout page or process the order.
+        }
+    
+ `,
+        };
+
+        function loadPage(page) {
+            document.getElementById('right-frame').srcdoc = pages[page];
+        }
+
+        // Load the home page by default
+        loadPage('home');
+    </script>
+</body>
+</html>
